@@ -34,15 +34,15 @@ public class MainController {
     }
 
     @GetMapping("/profiles/{profileId}")
-    public Profile getProfileById(@PathVariable Integer id)
+    public Profile getProfileById(@PathVariable Integer profileId)
     {
-        return model.getProfileById(id);
+        return model.getProfileById(profileId);
     }
 
     @GetMapping("/profiles/{profileId}/postings")
-    public List<Posting> getProfilePostings(@PathVariable Integer id)
+    public List<Posting> getProfilePostings(@PathVariable Integer profileId)
     {
-        Profile currentProfile = model.getProfileById(id);
+        Profile currentProfile = model.getProfileById(profileId);
         return currentProfile.getPostings();
     }
 
