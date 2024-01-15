@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Nelsonlab2Application<nelsonlab2>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "comp74.nelsonlab2.Nelsonlab2Application",
+            "projectName": "nelsonlab2",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

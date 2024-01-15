@@ -1,5 +1,6 @@
-package comp74;
+package comp74.nelsonlab2;
 
+import java.io.Console;
 import java.util.Random;
 
 import org.springframework.boot.CommandLineRunner;
@@ -29,27 +30,25 @@ public class Initializer implements CommandLineRunner{
 
     @Override
     public void run(String... args) throws Exception {
-        // TODO Auto-generated method stub
            
         Random random = new Random();
-        
         Integer nProfiles = MIN_PROFILES + random.nextInt(MAX_PROFILES - MIN_PROFILES);
-
-
-        for(int profileCount=0; profileCount< nProfiles; profileCount++)
+        for(int profileCount=0; profileCount < nProfiles; profileCount++)
         {
-            Profile newProfile = new Profile(lorem.getName());
+        
+            Profile newProfile = new Profile(lorem.getFirstName());
             Integer nPostings = MIN_POSTS + random.nextInt(MAX_POSTS - MIN_POSTS);
             for(int postCount=0; postCount< nPostings; postCount++ )
             {
                 Posting newPost = new Posting();
-                newPost.setUsername(newProfile.getUserName());
+                newPost.setUserName(newProfile.getUserName());
                 Integer nWords = 10 + random.nextInt(MAX_POSTS - MIN_POSTS);
                 newPost.setPostingText(lorem.getWords(nWords));
                 model.addPost(newPost);
                 newProfile.addPosting(newPost);
             }
             model.addProfile(newProfile);
+            
         }
         // throw new UnsupportedOperationException("Unimplemented method 'run'");
     }

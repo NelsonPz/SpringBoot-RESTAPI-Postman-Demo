@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Model {
     
     HashMap<Integer,Profile> profiles;
@@ -21,8 +24,7 @@ public class Model {
 
     public Profile addProfile(Profile newProfile)
     {
-        newProfile.setProfileId(nextProfileId);
-        newProfile.setUserName("x");
+        newProfile.setProfileId(nextProfileId++);
         profiles.put(newProfile.getProfileId(), newProfile);
         return newProfile;
     }
@@ -37,14 +39,13 @@ public class Model {
 
     public List<Profile> getProfiles()
     {
-        List<Profile> profileList = new ArrayList<Profile>(profiles.values());
+        List<Profile> profileList = new ArrayList<>(profiles.values());
         return profileList;
     }
 
-
     public List<Posting> getPostings()
     {
-        List<Posting> postingList = new ArrayList<Posting>(postings.values());
+        List<Posting> postingList = new ArrayList<>(postings.values());
         return postingList;
     }
 
@@ -52,7 +53,7 @@ public class Model {
     {
         return profiles.get(id);
     }
-
+    //get all
     public Posting gePostingById(Integer id)
     {
         return postings.get(id);
