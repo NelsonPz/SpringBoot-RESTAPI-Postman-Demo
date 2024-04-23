@@ -1,4 +1,4 @@
-# Nelsonlab2
+# SpringBoot-Postman-
 
 This is a Spring Boot application that simulates a basic social media platform. Users can create profiles, make posts, and view posts made by other users.
 
