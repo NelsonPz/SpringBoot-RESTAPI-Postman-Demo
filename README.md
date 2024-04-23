@@ -6,7 +6,7 @@ This is a Spring Boot application that simulates a basic social media platform. 
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your_username/SpringBoot-Postman-Demo.git
+   git clone https://github.com/your_username/SpringBoot-RESTAPI-Postman-Demo.git
 2. **Navigate to the project directory:**
    cd nelsonlab2
 3. **Build the project using Maven:**
